@@ -13,11 +13,4 @@ public class homeController {
     public String home() {
         return "index";
     }
-
-    @ResponseBody
-    @RequestMapping("/sessionClear")
-    public String sessionClear(HttpSession ss) {
-        ss.invalidate();
-        return "OK";
-    }
 }

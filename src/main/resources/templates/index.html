@@ -42,11 +42,10 @@
                         <span data-th-text="#{lang.change}"></span>:
                         <select id="locales" >
                             <option value="ko" data-th-text="#{lang.ko}"
-                                    data-th-selected=" ${param.lang eq null or param.lang.toString()=='ko' }" />
+                                    data-th-selected=" ${param.lang eq null or param.lang?.toString()=='ko' }" />
                             <option value="ja" data-th-text="#{lang.ja}"
                                     data-th-selected=" ${param.lang?.toString()=='ja' }" />
                         </select>
-                        <button type=button id=btnClear >TEST</button>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
@@ -283,13 +282,6 @@
                       window.location.replace('index?lang=' + selectedOption);
                   }
             })
-
-            $('#btnClear').click( ()=> {
-                $.get("sessionClear", res => {
-                alert(res)
-              })
-            })
-            console.log(9999999)
         </script>
     </body>
 </html>
