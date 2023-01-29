@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layoutExtend/layoutFile}">
     <head>
         <title>로그인 / 회원가입</title>
         <meta charset="utf-8">
         <link href="/bootstrap/login/css/style.css" type="text/css"  rel="stylesheet" />
     </head>
-    <body>
+    <body layout:fragment="content">
         <div class="wrap">
             <div class="form-wrap">
                 <div class="button-wrap">

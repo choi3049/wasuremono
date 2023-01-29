@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("index")
+@RequestMapping("/")
 public class homeController {
 
     @GetMapping
     public String home() {
-        return "index";
+        return "page/index";
     }
 
-    @GetMapping("/login")
-    public String login() { return "login"; }
+    @GetMapping("/index/login")
+    public String login() { return "page/login"; }
 }
