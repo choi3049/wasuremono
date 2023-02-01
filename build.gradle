@@ -22,10 +22,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-	// https://mvnrepository.com/artifact/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect
-	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
-
  	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.4'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

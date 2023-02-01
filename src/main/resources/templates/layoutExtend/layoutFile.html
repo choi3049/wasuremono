@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link href="/bootstrap/index/css/styles.css" rel="stylesheet" />
-    <link href="/bootstrap/index/css/layout.css" rel="stylesheet" />
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <title th:replace="${title}">레이아웃 타이틀</title>
 </head>
+
 <body>
-    <nav th:replace="fragment/nav :: navFragment"></nav>
-    <header th:replace="fragment/header :: headerFragment"></header>
-    <div layout:fragment="content"></div>
-    <footer th:replace="fragment/footer :: footerFragment"></footer>
+
+<nav th:replace="/fragment/nav.html :: fragment-nav"></nav>
+
+<header th:replace="/fragment/header.html :: fragment-header"></header>
+
+<div th:replace="${content}"> <p>레이아웃 컨텐츠</p></div>
+
+<footer th:replace="/fragment/footer.html :: fragment-footer"><p>레이아웃 푸터</p></footer>
+
 </body>
 </html>
